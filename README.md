@@ -1,4 +1,4 @@
-Instalações 
+* Instalações 
 
 1- python (https://www.python.org/downloads/)
 
