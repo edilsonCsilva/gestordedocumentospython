@@ -20,8 +20,9 @@
       
             --Instalação das Bibliotecas Necessarias para Projeto
                   --flask 
-                    pip install -U flask
-                    pip install -U flask-cors    
+                    pip install  flask
+                    pip install  flask-cors 
+                    pip install  SQLAlchemy
             
       
 
