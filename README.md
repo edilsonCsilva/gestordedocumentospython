@@ -10,7 +10,7 @@
             py -m venv env   #env pode ser um nome de sua preferência. Ex: legadoApp
             
             ---Ativar o Ambiente
-                  .\env\Scripts\activate   # .\legadoApp\Scripts\activate
+                  env\Scripts\activate   # legadoApp\Scripts\activate
                   
             
             
