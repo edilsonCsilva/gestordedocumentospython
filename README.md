@@ -19,6 +19,8 @@
       3-instalar o flask dentro do ambiente Virtual criado (https://flask.palletsprojects.com/en/2.2.x/installation/#install-flask)
       
             --Instalação das Bibliotecas Necessarias para Projeto
+                  -- pip install Flask
+            
             
       
 
