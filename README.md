@@ -1,8 +1,6 @@
 Visual do Sistema de Gestao de Documentos Simples
 
-![image](https://user-images.githubusercontent.com/57496238/196919337-21dac489-cf34-4a94-8b80-8d9016dad9cd.png)
-
-![image](https://user-images.githubusercontent.com/57496238/196919584-2bcb0be3-d2fc-4d80-8b17-2f931134d35c.png)
+![image](https://user-images.githubusercontent.com/57496238/196919337-21dac489-cf34-4a94-8b80-8d9016dad9cd.png) ![image](https://user-images.githubusercontent.com/57496238/196919584-2bcb0be3-d2fc-4d80-8b17-2f931134d35c.png)
 
 ![image](https://user-images.githubusercontent.com/57496238/196919782-188600b5-b9ff-4373-a2f3-4f03e81cda0e.png)
 
