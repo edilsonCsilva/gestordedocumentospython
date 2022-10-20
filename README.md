@@ -1,3 +1,9 @@
+Visual do Sistema de Gestao de Documentos Simples
+
+![image](https://user-images.githubusercontent.com/57496238/196919337-21dac489-cf34-4a94-8b80-8d9016dad9cd.png)
+
+
+
 * Instalações 
 
       1- python (https://www.python.org/downloads/)
@@ -19,12 +25,8 @@
       3-instalar o flask dentro do ambiente Virtual criado (https://flask.palletsprojects.com/en/2.2.x/installation/#install-flask)
       
             --Instalação das Bibliotecas Necessarias para Projeto
-                  --flask  cors Sql
-                    pip install  flask                #para criar o servidor web
-                    pip install  flask-cors           #para liberar acesso de fora do Browse
-                    pip install  SQLAlchemy           #ORM para Manipular a Base de Dados
-                    
-             
+                  -- pip install Flask
+            
             
       
 
