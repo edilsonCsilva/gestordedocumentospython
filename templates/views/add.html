@@ -1,0 +1,356 @@
+{% extends "views/modelos/base.html" %}
+{% block title %}
+{{ data[0]["title"] }}
+{% endblock %}
+
+
+{% block content %}
+
+<style>
+.fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: auto;
+  background: lime; /* Just to visualize the extent */
+  
+}
+
+
+
+.fab{
+  position: fixed;
+  bottom:10px;
+  right:10px;
+}
+
+.fab button{
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+  border-radius: 30px;
+  background-color: #cb60b3;
+  border: none;
+  box-shadow: 0 1px 5px rgba(0,0,0,.4);
+  font-size: 24px;
+  color: white;
+    
+  -webkit-transition: .2s ease-out;
+  -moz-transition: .2s ease-out;
+  transition: .2s ease-out;
+}
+
+.fab button.main{
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  background-color: #5b19b7;
+  right: 0;
+  bottom: 0;
+  z-index: 20;
+}
+
+.fab button.main:before{
+  content: '⏚';
+}
+
+.fab ul{
+  position:absolute;
+  bottom: 0;
+  right: 0;
+  padding:0;
+  padding-right:5px;
+  margin:0;
+  list-style:none;
+  z-index:10;
+  
+  -webkit-transition: .2s ease-out;
+  -moz-transition: .2s ease-out;
+  transition: .2s ease-out;
+}
+
+.fab ul li{
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  margin-bottom: -10%;
+  opacity: 0;
+  
+  -webkit-transition: .3s ease-out;
+  -moz-transition: .3s ease-out;
+  transition: .3s ease-out;
+}
+
+.fab ul li label{
+  margin-right:10px;
+  white-space: nowrap;
+  display: block;
+  margin-top: 10px;
+  padding: 5px 8px;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0,0,0,.2);
+  border-radius:3px;
+  height: 34px;
+  font-size: 16px;
+  pointer-events: none;
+  opacity:0;
+  
+  -webkit-transition: .2s ease-out;
+  -moz-transition: .2s ease-out;
+  transition: .2s ease-out;
+}
+
+.fab button.main:active,
+.fab button.main:focus{
+  outline: none;
+  background-color: #7716ff;
+  box-shadow: 0 3px 8px rgba(0,0,0,.5);
+ }
+ 
+.fab button.main:active:before,
+.fab button.main:focus:before{
+  content: '↑';
+}
+
+.fab button.main:active + ul,
+.fab button.main:focus + ul{
+  bottom: 70px;
+}
+
+.fab button.main:active + ul li,
+.fab button.main:focus + ul li{
+  margin-bottom: 10px;
+  opacity: 1;
+}
+
+.fab button.main:active + ul li:hover label,
+.fab button.main:focus + ul li:hover label{
+  opacity: 1;
+}
+
+
+
+
+.float-whatsapp {
+    bottom: 80px;
+    right: 20px;
+    z-index: 999;
+    font-size: 14px;
+}
+
+.float-whatsapp.float-on {
+  position: fixed;
+}
+
+.float-whatsapp a {
+    background: #008617;
+    padding: 10px 20px 10px 15px;
+    border-radius: 100px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.float-whatsapp svg {
+    height: 16px;
+    margin-bottom: -2px;
+}
+
+textarea {
+  width: 300px;
+  height: 10rem  !important;
+}
+
+ 
+
+
+</style>
+
+<div class="anl-container scrollY">
+
+  <div class="painel-header">
+
+    <div class="painel-input-pesquisa">
+
+      <div class="input-group">
+
+        <div class="viewdoc-action">
+          <div >
+            <a href="/painel">  
+              <i class="fa fa-arrow-left" style="font-size:48px;color:red"></i>
+            </a>
+          </div>
+
+            <div class="viewdocs-right">
+              
+
+              <div >
+                <a href="javascript:void(0)" id=" ">  
+                  <i class="fa fa-floppy-o" aria-hidden="true" style="font-size:48px;color:red"></i>
+
+                </a>
+              </div>
+
+
+            </div>
+         
+            
+        </div>
+      
+
+
+      </div>
+
+    </div>
+<hr>
+
+
+  </div>
+
+  <div class="painel-main">
+
+
+    <div class="painel-list-docs-docs">
+
+      <div class="row">
+        <div class="col-md-8 p-4">
+          
+
+          <form >
+            <div class="form-floating ">
+               <input type="text" class="form-control is-invalid" id="floatingInputInvalid"  >
+              <label for="floatingInputInvalid">Nome do Arquivo</label>
+            </div>
+            <div class="form-floating mt-2">
+              <textarea class="form-control"  placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+              <label for="floatingTextarea">Comments</label>
+            </div>
+
+          
+            <div class="form-group">
+                  <div class="row">
+
+                        <div class="col-sm-4 p-3">
+                          <div class="d-grid gap-2">
+                            <button class="btn btn-danger actionFilesOn" refid="fileoriginal"  type="button">Arquivo Original *</button>
+                          </div>
+
+                        </div>
+
+                        <div class="col-sm-4 p-3">
+                          <div class="d-grid gap-2     " id="filenameoriginal"  >
+                            Selecione um Arquivo.!
+                          </div>
+
+                        </div>
+
+                  </div>
+
+                  <div class="row">
+
+                    <div class="col-sm-4 p-3">
+                      <div class="d-grid gap-2">
+                        <button class="btn btn-warning actionFilesOn" refid="filepdf" type="button">Arquivo pdf *</button>
+                      </div>
+
+                    </div>
+
+                    <div class="col-sm-4 p-3">
+                      <div class="d-grid gap-2 " id="filenamepdf">
+                        Selecione um Arquivo.!
+                      </div>
+
+                    </div>
+
+              </div>
+
+            </div>
+
+
+            <input type="file" style="display: none;" name="fileoriginal"  viewname="filenameoriginal" id="fileoriginal">
+            <input type="file" name="filepdf" style="display:none ;" viewname="filenamepdf"  id="filepdf">
+
+
+
+           
+          </form>
+
+
+
+
+
+        </div>
+        <div class="col-md-4"></div>
+      </div>
+ 
+
+      
+    </div>
+
+  </div>
+</div>
+</div>
+
+
+
+
+{% endblock %}
+
+
+
+{% block js %}
+
+<script>
+
+
+ 
+document.addEventListener("DOMContentLoaded",function(){
+
+  const actionFilesOn =document.getElementsByClassName('actionFilesOn') 
+  for(el of actionFilesOn){
+    el.addEventListener('click',function(e){
+      var  fileInput=document.getElementById(e.target.attributes.refid.textContent)
+      fileInput.addEventListener("change", function(e){
+        var  fileview=e.target.attributes[3].textContent
+        var  fileName="Selecione um Arquivo.!"
+        
+        if(typeof e.path[0].files[0]=== "undefined"){}else{
+          fileName= e.path[0].files[0].name
+          }        
+        document.getElementById(fileview).innerHTML=fileName
+
+       
+
+
+
+   
+
+      
+      });
+      fileInput.click()
+
+ 
+    })
+  }
+
+  
+
+
+
+
+
+})
+
+
+ 
+
+
+
+</script>
+
+
+  
+{% endblock %}
+

@@ -1,0 +1,90 @@
+{% extends "views/modelos/base.html" %}
+{% block title %}
+   {{ data[0]["title"]  }}
+{% endblock %}
+
+
+{% block content %}
+   
+
+ <div class="anl-container">
+
+    <div class="left"></div>
+    <div class="main">
+
+      
+
+
+
+        <header>
+            <h1 class="h1 p-4">Gestor de Documento Simples </h1>
+        </header>
+
+        <div class="container-imagens">
+            <div class="img-cards">
+                <img src="{{ url_for('static',filename='img/m1.png') }}" alt="" srcset="">
+            </div>
+
+            <div class="img-cards">
+                <img src="{{ url_for('static',filename='img/m1.png') }}" alt="" srcset="">
+            </div>
+
+            <div class="img-cards">
+                <img src="{{ url_for('static',filename='img/m1.png') }}" alt="" srcset="">
+            </div>
+
+
+        </div>
+
+        <div class="actions ">
+           <div class="row ">
+                    <div class="col-sm-6 p-1  d-grid gap-3">
+                        
+                        <button class="btn btn-danger    btn-lg  btn-customes" onclick="entrar()">Entrar </button>
+                    </div>
+                    <div class="col-sm-3 p-1 d-grid gap-3">
+                        <a href="cadastro" class="btn btn-dark btn-lg btn-customes" >Criar Nova Conta</a>
+                    </div>
+                    
+
+           </div>
+        </div>
+        
+
+
+
+          <hr>
+          <h1>{{ data[3]["dia"] }}</h1>  
+
+
+
+
+    </div>
+
+    
+    
+ </div>
+
+{% endblock %}
+{% block js %}
+
+<script>
+
+    function entrar(event){
+        window.location.href="/painel"
+    }
+
+
+</script>
+
+
+  
+{% endblock %}
+
+
+
+
+
+
+
+

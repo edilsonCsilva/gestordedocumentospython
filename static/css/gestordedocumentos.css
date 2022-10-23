@@ -1,0 +1,437 @@
+@import url('https://fonts.googleapis.com/css2?family=Abyssinica+SIL&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&display=swap');
+
+
+/* This only changes this particular animation duration */
+.animate__animated.animate__bounce {
+    --animate-duration: 2s;
+  }
+
+  .animate__animated.animate__fadeInDown {
+    --animate-duration: 2s;
+  }
+  .animate__animated.animate__fadeInBottomLeft {
+    --animate-duration: 2s;
+  }
+
+  .animate__animated.animate__slideInUp {
+    --animate-duration: 2s;
+  }
+
+
+
+  
+
+  
+
+  
+  /* This changes all the animations globally */
+  :root {
+    --animate-duration: 800ms;
+    --animate-delay: 0.9s;
+  }
+
+
+
+* {
+    font-family: 'Abyssinica SIL', serif;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box !important;
+
+
+}
+
+.hide{
+    display: none !important;
+}
+
+.scrollY {
+    overflow: hidden !important;
+    overflow-y: auto !important;
+}
+
+.auto-center {
+    margin: 0 auto !important;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+.anl-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: hidden;
+
+}
+
+.anl-container .left {
+    background-color: #666666ff;
+    height: 100%;
+    display: inline;
+    width: 4%;
+    float: left;
+
+
+    -webkit-box-shadow: -2px 10px 30px 6px rgba(0, 0, 0, 0.64);
+    box-shadow: -2px 10px 30px 6px rgba(0, 0, 0, 0.64);
+
+}
+
+.anl-container .main {
+    height: 100%;
+    display: inline;
+    float: left;
+    width: calc(100% - 4%);
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.anl-container header {
+
+    height: 6rem;
+    text-align: center;
+    line-height: 6rem;
+    font-size: 2rem;
+}
+
+.anl-container .anl-container-imagens {
+
+    background-color: rgb(224, 166, 39) !important;
+
+
+
+
+}
+
+.anl-container .container-imagens .img-cards {
+    margin: 2rem;
+    display: inline;
+    position: relative;
+    float: left;
+    left: 6rem;
+    width: 20rem;
+    max-width: 23rem;
+    height: 27rem;
+    max-height: 27rem;
+
+    border: 1px solid #666666ff;
+
+
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    overflow: hidden;
+
+    -webkit-box-shadow: 5px 5px 15px 5px #000000;
+    box-shadow: 5px 5px 15px 5px #000000;
+
+
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+
+
+
+}
+
+
+.anl-container .container-imagens .img-cards img {
+    position: relative;
+    object-fit: fill;
+    width: 100%;
+    border: 1px saddlebrown !important;
+
+
+}
+
+
+
+
+.anl-container .actions {
+    position: relative;
+    padding: 2rem;
+    clear: both;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.anl-container .actions .row {
+    width: 100%;
+}
+
+.btn-customes {
+
+    width: 78%;
+    margin: auto;
+
+}
+
+
+
+.b-label-left {
+
+    position: relative;
+    text-align: left;
+
+}
+
+.b-label-left label {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+
+
+
+.anl-container .painel-header {
+    position: relative;
+    background-color: #fff;
+    height: 6rem;
+    width: 98%;
+    margin: .2rem auto;
+    padding: 1rem;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.anl-container .painel-main {
+    position: relative;
+    height: calc(100% - 6rem);
+
+
+
+
+}
+
+.anl-container .painel-main .painel-list-docs {
+    position: relative;
+
+    padding: 1rem;
+    width: 95%;
+    margin: .2rem auto;
+    padding: 1rem;
+    margin-bottom: 2rem;
+
+    border: .1rem solid saddlebrown;
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    border-radius: 13px;
+
+
+
+
+}
+
+
+
+
+.anl-container .painel-main .painel-list-docs-docs {
+    position: relative;
+
+    padding: 1rem;
+    width: 95%;
+    margin: .2rem auto;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    height: 100%;
+
+    
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    border-radius: 13px;
+
+
+
+
+}
+
+
+
+
+.anl-container .painel-main .painel-list-docs .listDoc-title {
+    text-decoration: underline;
+}
+
+
+
+.anl-container .painel-main .painel-list-docs .listDoc {
+    position: relative;
+    background-color: #fff;
+    padding: .6rem;
+
+
+
+
+
+
+}
+
+.anl-container .painel-main .painel-list-docs .listDoc .listDocItem {
+    position: relative;
+    float: left;
+    display: inline;
+
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 5px 5px 15px 5px #000000;
+    box-shadow: 5px 5px 15px 5px #000000;
+    padding: .5rem;
+    margin: 1rem;
+    
+    max-height: 19rem;
+    min-height: 19rem;
+    height: auto    ;
+    width: 12rem;
+}
+
+.anl-container .painel-main .painel-list-docs .listDoc .listDocItem .painel-select{
+    margin-left: .6rem;
+}
+
+ 
+
+.anl-container .painel-main .painel-list-docs .listDoc .listDocItem .painel-file-container {
+   width: 100%;
+    
+
+}
+
+.anl-container .painel-main .painel-list-docs .listDoc .listDocItem .listDocItemTitle {
+    position: relative;
+    text-align: center;
+    max-height: 17rem;
+    word-break: break-all;
+    margin-top: .5rem;
+    padding: .2rem;
+    max-width: 18rem;  
+    
+    overflow: hidden;  
+    text-overflow: ellipsis;  
+    
+    
+
+}
+.anl-container .painel-main .painel-list-docs .listDoc .listDocItem .listDocItemFooter {
+    text-align: end;
+    position: absolute;
+    bottom: 0;
+    width: 90%;
+ 
+
+}
+
+
+.anl-container .painel-main .painel-list-docs .listDoc .listDocItem .listDocItemFooter .painel-action{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.file-capa {
+    position: relative;
+    min-width:10rem;
+    width:10rem;
+    height: 10rem;
+    object-fit: fill;
+  
+}
+
+
+.anl-container .painel-main .painel-list-docs .listDoc .listDocItem .painel-file-container {
+    
+    position: relative;
+    overflow: hidden;
+}
+
+
+.anl-container .painel-header .painel-input-pesquisa .input-group  .viewdoc-action{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}  
+
+ 
+
+.anl-container .painel-header .painel-input-pesquisa .input-group  .viewdoc-action .viewdocs-right{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+
+.anl-container .painel-header .painel-input-pesquisa .input-group  .viewdoc-action .viewdocs-right div{
+    margin-left:.3rem;
+    justify-content: end;
+    
+}
+.anl-container .painel-header .painel-input-pesquisa .input-group  .viewdoc-action .viewdocs-right div a .tb-img{
+    max-height: 4rem;
+    height: 4rem;
+}
+
+.anl-container .painel-header .painel-input-pesquisa .input-group  .viewdoc-action   div a .tb-img{
+    max-height: 4rem;
+    height: 4rem;
+}
+
+
+.view{
+    height: 100%;
+    width: 100%;
+}
+
+
+
+
+#addnewfile{
+    position:fixed;
+   
+    z-index: 9;
+    bottom: 0;
+    right: 3rem;
+    padding: .2rem;
+    
+
+}
+
+ 
+ 

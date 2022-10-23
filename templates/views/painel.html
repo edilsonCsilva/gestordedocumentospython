@@ -1,0 +1,270 @@
+{% extends "views/modelos/base.html" %}
+{% block title %}
+{{ data[0]["title"] }}
+{% endblock %}
+
+
+{% block content %}
+
+<style>
+  .fab-container {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    cursor: pointer;
+  }
+
+  .iconbutton {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background: #FF4F79;
+    box-shadow: 10px 10px 5px #aaaaaa;
+  }
+
+  .button {
+    width: 60px;
+    height: 60px;
+    background: #A11692;
+  }
+
+  .iconbutton i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: white;
+  }
+</style>
+
+<div class="anl-container scrollY">
+
+  <div class="painel-header">
+
+    <div class="painel-input-pesquisa">
+
+      <div class="input-group">
+        <img class="input-group-text" src="{{ url_for('static',filename='img/icons8-cliente-windows-48.png') }}" alt=""
+          srcset="">
+
+        <input type="text" name="" id="" class="form-control" placeholder="Digite o Nome do Arquivo...">
+      </div>
+
+    </div>
+
+
+
+  </div>
+
+  <div class="painel-main">
+    <div id="addnewfile">
+       <a href="/add" class="btn">
+        <div class="button iconbutton">
+          <i class="fa fa-plus" aria-hidden="true"></i>
+        </div>
+       </a>
+
+       <a href="/add" class="btn">
+        <div class="button iconbutton">
+          <i class="fa fa-sign-out" aria-hidden="true"></i>
+
+        </div>
+       </a>
+    </div>
+
+
+
+
+
+    <div class="painel-list-docs animate__animated animate__slideInUp " style="background-color:#fff">
+      <span class="listDoc-title">
+        <h4>Documentos Recentes</h4>
+      </span>
+      <div class="listDoc clearfix">
+        <div class="listDocItem  ">
+          <div class="painel-select"><input type="checkbox"></div>
+          <div class="painel-file-container p-1 ">
+            <img class="input-group-text file-capa auto-center " src="{{ url_for('static',filename='img/docpdf.png') }}"
+              alt="" srcset="">
+          </div>
+          <div class="listDocItemTitle">
+            <h5>Meus Passos em Cristo</h5>
+          </div>
+          <div class="listDocItemFooter">
+            <div class="painel-action">
+
+              <a href="viewdoc?doc=1">
+                <i class="fa fa-search" style="font-size:1rem"></i>
+              </a>
+
+
+              <a href="http://">
+                <i class="fa fa-flickr" style="font-size:1rem"></i>
+              </a>
+
+
+
+              <a href="http://">
+                <i class="fa fa-remove" style="font-size:1rem"></i>
+              </a>
+
+              <div>
+                <b>12/10/2021</b>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+
+        <div class="listDocItem ">
+          <div class="painel-select"><input type="checkbox"></div>
+          <div class="painel-file-container p-1 ">
+            <img class="input-group-text file-capa auto-center "
+              src="{{ url_for('static',filename='img/docplaninha.png') }}" alt="" srcset="">
+          </div>
+          <div class="listDocItemTitle">
+            <h5>Meus Passos em Cristosss</h5>
+          </div>
+          <div class="listDocItemFooter">
+            <div class="painel-action">
+
+              <a href="http://">
+                <i class="fa fa-search" style="font-size:1rem"></i>
+              </a>
+
+
+              <a href="http://">
+                <i class="fa fa-flickr" style="font-size:1rem"></i>
+              </a>
+
+
+
+              <a href="http://">
+                <i class="fa fa-remove" style="font-size:1rem"></i>
+              </a>
+
+              <div>
+                <b>12/10/2021</b>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+
+
+
+
+      </div>
+    </div>
+
+
+
+
+
+    <div class="painel-list-docs animate__animated animate__slideInUp " style="background-color:#fff">
+      <span class="listDoc-title">
+        <h4>Documentos Recentes</h4>
+      </span>
+      <div class="listDoc clearfix">
+        <div class="listDocItem  ">
+          <div class="painel-select"><input type="checkbox"></div>
+          <div class="painel-file-container p-1 ">
+            <img class="input-group-text file-capa auto-center " src="{{ url_for('static',filename='img/docpdf.png') }}"
+              alt="" srcset="">
+          </div>
+          <div class="listDocItemTitle">
+            <h5>Meus Passos em Cristo</h5>
+          </div>
+          <div class="listDocItemFooter">
+            <div class="painel-action">
+
+              <a href="viewdoc?doc=1">
+                <i class="fa fa-search" style="font-size:1rem"></i>
+              </a>
+
+
+              <a href="http://">
+                <i class="fa fa-flickr" style="font-size:1rem"></i>
+              </a>
+
+
+
+              <a href="http://">
+                <i class="fa fa-remove" style="font-size:1rem"></i>
+              </a>
+
+              <div>
+                <b>12/10/2021</b>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+
+        <div class="listDocItem ">
+          <div class="painel-select"><input type="checkbox"></div>
+          <div class="painel-file-container p-1 ">
+            <img class="input-group-text file-capa auto-center "
+              src="{{ url_for('static',filename='img/docplaninha.png') }}" alt="" srcset="">
+          </div>
+          <div class="listDocItemTitle">
+            <h5>Meus Passos em Cristosss</h5>
+          </div>
+          <div class="listDocItemFooter">
+            <div class="painel-action">
+
+              <a href="http://">
+                <i class="fa fa-search" style="font-size:1rem"></i>
+              </a>
+
+
+              <a href="http://">
+                <i class="fa fa-flickr" style="font-size:1rem"></i>
+              </a>
+
+
+
+              <a href="http://">
+                <i class="fa fa-remove" style="font-size:1rem"></i>
+              </a>
+
+              <div>
+                <b>12/10/2021</b>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+
+
+
+
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</div>
+</div>
+
+
+
+
+{% endblock %}
