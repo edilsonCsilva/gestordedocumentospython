@@ -29,9 +29,40 @@ def home():
 
 
 
-@app.route("/teste")
-def meuteste():
-    return "<h1>Isso  é um Teste:)</h1>"
+
+@app.route("/cadastro")
+def cadastro():
+     data=contentValues.getAll() 
+     return render_template('views/register.html',**locals())
+
+
+
+@app.route("/painel")
+def painel():
+     data=contentValues.getAll() 
+
+     return render_template('views/painel.html',**locals())
+
+
+
+
+@app.route("/viewdoc")
+def viewdoc():
+     data=contentValues.getAll() 
+
+     return render_template('views/viewdocs.html',**locals())
+
+
+
+@app.route("/add")
+def add():
+     data=contentValues.getAll() 
+
+     return render_template('views/add.html',**locals())
+
+
+
+
 
 
 if __name__ == '__main__':
