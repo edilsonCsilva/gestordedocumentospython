@@ -6,9 +6,9 @@ Visual do Sistema de Gestao de Documentos Simples
 
 ![image](https://user-images.githubusercontent.com/57496238/201520956-4828574a-acc1-47e5-95e9-33ed7856c45c.png)
 
-
-
-
+ 
+https://docs.sqlalchemy.org/en/20/orm/
+https://www.youtube.com/watch?v=nwJYbbJfJpg&t=1350s
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// 
 * Instalações 
