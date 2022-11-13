@@ -2,9 +2,13 @@ Visual do Sistema de Gestao de Documentos Simples
 
 ![image](https://user-images.githubusercontent.com/57496238/196919337-21dac489-cf34-4a94-8b80-8d9016dad9cd.png)  ![image](https://user-images.githubusercontent.com/57496238/196919584-2bcb0be3-d2fc-4d80-8b17-2f931134d35c.png)  ![image](https://user-images.githubusercontent.com/57496238/196920509-bbbc88bc-d89a-41e8-a38e-0d9c7e80b1bb.png)
 
+*****modelo base****
 
+![image](https://user-images.githubusercontent.com/57496238/201520956-4828574a-acc1-47e5-95e9-33ed7856c45c.png)
 
-
+ 
+https://docs.sqlalchemy.org/en/20/orm/
+https://www.youtube.com/watch?v=nwJYbbJfJpg&t=1350s
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// 
 * Instalações 
@@ -29,6 +33,7 @@ Visual do Sistema de Gestao de Documentos Simples
       
             --Instalação das Bibliotecas Necessarias para Projeto
                    --flask  cors Sql
+                    pip install  uuid
                     pip install  flask                #para criar o servidor web
                     pip install  flask-cors           #para liberar acesso de fora do Browse
                     pip install  SQLAlchemy           #ORM para Manipular a Base de Dados
