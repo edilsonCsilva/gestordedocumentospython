@@ -33,6 +33,7 @@ Visual do Sistema de Gestao de Documentos Simples
       
             --Instalação das Bibliotecas Necessarias para Projeto
                    --flask  cors Sql
+                    pip install  uuid
                     pip install  flask                #para criar o servidor web
                     pip install  flask-cors           #para liberar acesso de fora do Browse
                     pip install  SQLAlchemy           #ORM para Manipular a Base de Dados
