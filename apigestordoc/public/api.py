@@ -12,7 +12,7 @@ CORS(app)
 
 @app.route("/")
 def init():
-    return "ok"  
+    return "<h3>Api OK </h3>"  
 
 
 @app.route("/recurso-a")
